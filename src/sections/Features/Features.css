@@ -1,0 +1,38 @@
+.features__head {
+  display: grid;
+  gap: var(--space-4);
+  max-width: 720px;
+}
+
+.features__title {
+  font-size: var(--text-4xl);
+}
+
+.features__title span {
+  color: var(--color-primary);
+}
+
+.features__lead {
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+}
+
+/* ---------- Category tabs (TabPills) ---------- */
+.features__tabs {
+  margin: var(--space-10) calc(var(--container-gutter) * -1) var(--space-6);
+  padding-inline: var(--container-gutter);
+}
+
+/* ---------- Grid ---------- */
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+  gap: var(--space-4);
+}
+
+/* ---------- Show all ---------- */
+.features__more {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-8);
+}

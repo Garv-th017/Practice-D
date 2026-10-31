@@ -1,0 +1,11 @@
+.filter-types {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.filter-types__chip {
+  justify-content: center;
+  padding-block: 9px;
+  border-radius: 10px;
+}

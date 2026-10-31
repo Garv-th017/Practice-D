@@ -1,0 +1,61 @@
+.sg-radii,
+.sg-shadows {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 140px), 1fr));
+  gap: var(--space-4);
+}
+
+.sg-radius,
+.sg-shadow {
+  display: grid;
+  gap: 2px;
+  font-size: var(--text-sm);
+}
+
+.sg-radius__box {
+  height: 72px;
+  margin-bottom: var(--space-2);
+  border: 1.5px solid var(--color-primary);
+  background: var(--color-primary-soft);
+}
+
+.sg-shadows {
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg);
+}
+
+.sg-shadow__box {
+  height: 72px;
+  margin-bottom: var(--space-2);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-elevated);
+}
+
+.sg-shadow__note {
+  font-size: var(--text-xs);
+  color: var(--color-primary);
+}
+
+.sg-spacing {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.sg-space {
+  display: grid;
+  grid-template-columns: 96px auto 1fr;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.sg-space__bar {
+  height: 12px;
+  border-radius: 3px;
+  background: var(--color-accent);
+}
+
+.sg-space__px {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}

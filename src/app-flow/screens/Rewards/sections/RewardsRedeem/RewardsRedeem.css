@@ -1,0 +1,19 @@
+.rewards-redeem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+}
+
+.rewards-redeem + .rewards-redeem {
+  border-top: 1px solid var(--color-border);
+}
+
+.rewards-redeem__btn {
+  flex-shrink: 0;
+}
+
+.rewards-redeem__btn:disabled {
+  color: var(--color-text-muted);
+  font-weight: 600;
+}

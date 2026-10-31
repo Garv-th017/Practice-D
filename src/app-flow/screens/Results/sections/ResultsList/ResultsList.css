@@ -1,0 +1,58 @@
+.results-list {
+  display: grid;
+  gap: 10px;
+}
+
+.results-bus {
+  display: grid;
+  gap: 9px;
+  width: 100%;
+  text-align: left;
+  transition: border-color var(--dur-fast) var(--ease-out);
+}
+
+.results-bus:hover {
+  border-color: var(--color-primary);
+}
+
+.results-bus__head {
+  justify-content: flex-start;
+}
+
+.results-bus__price {
+  display: grid;
+  justify-items: end;
+  line-height: 1.1;
+}
+
+.results-bus__price small {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.results-bus__stops {
+  margin-top: -4px;
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.results-bus__line {
+  flex: 1;
+  border-top: 1px dashed var(--color-border-strong);
+}
+
+.results-bus__free {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-success);
+}
+
+.results-bus__seats {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.results-bus__seats.is-low {
+  color: var(--color-danger);
+}

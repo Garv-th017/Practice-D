@@ -1,0 +1,28 @@
+.return-saving {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 14px;
+  background: var(--color-success-soft);
+}
+
+.return-saving b {
+  color: var(--color-success);
+}
+
+.return-saving__text {
+  font-size: 11.5px;
+  color: var(--color-text-muted);
+}
+
+.return-saving__icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: var(--color-success);
+  color: var(--color-on-success);
+}

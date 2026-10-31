@@ -1,0 +1,14 @@
+.insurance {
+  display: grid;
+  gap: 8px;
+  transition: border-color var(--dur-fast) var(--ease-out);
+}
+
+.insurance.is-on {
+  border-color: var(--color-primary);
+}
+
+.insurance__text {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}

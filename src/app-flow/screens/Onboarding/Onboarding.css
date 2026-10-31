@@ -1,0 +1,21 @@
+.onboarding {
+  gap: 18px;
+}
+
+.onboarding__top {
+  display: flex;
+  justify-content: flex-end;
+  min-height: 24px;
+}
+
+.onboarding__skip {
+  margin: -10px -8px;
+  padding: 10px 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.onboarding__skip:hover {
+  color: var(--color-primary);
+}

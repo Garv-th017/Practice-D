@@ -1,0 +1,9 @@
+.profile-form {
+  display: grid;
+  gap: 14px;
+}
+
+.profile-form__group {
+  display: grid;
+  gap: 6px;
+}

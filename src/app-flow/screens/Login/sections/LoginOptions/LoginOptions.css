@@ -1,0 +1,16 @@
+.login-options {
+  display: grid;
+  gap: 12px;
+}
+
+.login-options__terms {
+  font-size: 11px;
+  text-align: center;
+  color: var(--color-text-subtle);
+}
+
+.login-options__terms span {
+  color: var(--color-text-muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}

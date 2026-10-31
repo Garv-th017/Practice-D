@@ -1,0 +1,72 @@
+.rewards-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  background: var(--color-bg-elevated);
+}
+
+.rewards-card__ring {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+}
+
+.rewards-card__ring svg {
+  position: absolute;
+  inset: 0;
+  rotate: -90deg;
+}
+
+.rewards-card__ring circle {
+  fill: none;
+  stroke-width: 6;
+}
+
+.rewards-card__track {
+  stroke: var(--color-border);
+}
+
+.rewards-card__bar {
+  stroke: var(--color-primary);
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: var(--off);
+  transition: stroke-dashoffset var(--dur-slow) var(--ease-out);
+}
+
+.rewards-card__ring b {
+  position: relative;
+  font-size: 15px;
+}
+
+.rewards-card__text {
+  display: grid;
+  gap: 2px;
+}
+
+.rewards-card__tier {
+  justify-self: start;
+  padding: 2px 9px;
+  border-radius: var(--radius-pill);
+  background: var(--color-accent-soft);
+  color: var(--color-text);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.rewards-card__points {
+  font-family: var(--font-display);
+  font-size: 22px;
+  line-height: 1.1;
+}
+
+.rewards-card__next {
+  font-size: 11.5px;
+  color: var(--color-text-muted);
+}

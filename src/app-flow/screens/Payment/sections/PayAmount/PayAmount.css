@@ -1,0 +1,26 @@
+.pay-amount {
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+  padding: 16px 12px;
+  border-radius: 16px;
+  background: var(--color-primary-soft);
+  text-align: center;
+}
+
+.pay-amount__value {
+  font-family: var(--font-display);
+  font-size: 30px;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.pay-amount__safe {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-primary);
+}

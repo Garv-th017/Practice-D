@@ -1,0 +1,88 @@
+.track-map {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  background: var(--color-bg);
+  overflow: hidden;
+}
+
+.track-map__overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.track-map__road {
+  fill: none;
+  stroke: var(--color-bg-elevated);
+  stroke-width: 12;
+  vector-effect: non-scaling-stroke;
+}
+
+.track-map__route,
+.track-map__done {
+  fill: none;
+  stroke-linecap: round;
+  stroke-width: 4;
+  vector-effect: non-scaling-stroke;
+}
+
+.track-map__route {
+  stroke: var(--color-border-strong);
+  stroke-dasharray: 2 7;
+}
+
+.track-map__done {
+  stroke: var(--color-primary);
+}
+
+.track-map__stop {
+  fill: var(--color-bg-elevated);
+  stroke: var(--color-primary);
+  stroke-width: 3;
+}
+
+.track-map__stop--end {
+  fill: var(--color-accent);
+  stroke: var(--color-bg-elevated);
+}
+
+/* The bus sits where the travelled part ends: (110, 186) in the 280 × 300 map */
+.track-map__bus {
+  position: absolute;
+  left: calc(110 / 280 * 100%);
+  top: calc(186 / 300 * 100%);
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 3px solid var(--color-bg-elevated);
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  translate: -50% -50%;
+}
+
+.track-map__eta {
+  position: absolute;
+  top: 52px;
+  left: 50%;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 13px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background: var(--color-bg-elevated);
+  font-size: 11.5px;
+  white-space: nowrap;
+  translate: -50% 0;
+}
+
+.track-map__live {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-success);
+}

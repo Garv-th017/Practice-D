@@ -1,0 +1,46 @@
+.uf-list {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.uf-list__lane {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.uf-list__lane h2 {
+  font-size: var(--text-lg);
+}
+
+/* Two wireframes per row */
+.uf-list ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.uf-list__item {
+  display: grid;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+  text-align: left;
+}
+
+.uf-list__wire {
+  border-radius: 14px;
+  outline: 2px solid transparent;
+  outline-offset: 3px;
+}
+
+.uf-list__item.is-selected .uf-list__wire {
+  outline-color: var(--color-primary);
+}
+
+.uf-list__item b {
+  font-size: var(--text-sm);
+  font-weight: 600;
+}

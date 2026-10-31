@@ -1,0 +1,10 @@
+.rate-comment {
+  display: grid;
+  gap: 4px;
+}
+
+.rate-comment__count {
+  justify-self: end;
+  font-size: 11px;
+  color: var(--color-text-muted);
+}

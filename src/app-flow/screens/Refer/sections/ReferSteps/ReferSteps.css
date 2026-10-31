@@ -1,0 +1,23 @@
+.refer-steps {
+  display: grid;
+  gap: 12px;
+}
+
+.refer-steps li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.refer-steps__num {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 700;
+}

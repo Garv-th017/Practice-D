@@ -1,0 +1,25 @@
+/* 48 · Loyalty */
+.pv-loyalty { gap: 14px; }
+
+.pv-loyalty__pct {
+  position: relative;
+  font-size: 15px;
+}
+
+/* 49 · Refer */
+.pv-code {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 6px 6px 10px;
+  border: 1.5px dashed var(--color-primary);
+  border-radius: 8px;
+  letter-spacing: 0.06em;
+}
+
+/* 50 · Language */
+.pv-langs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}

@@ -1,0 +1,165 @@
+/* 10 · Seat map: 2 + aisle + 2 */
+.pv-seatmap {
+  display: grid;
+  grid-template-columns: repeat(2, 20px) 12px repeat(2, 20px);
+  gap: 6px;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-bg-elevated);
+}
+
+.pv-seatmap > :nth-child(4n + 3) { grid-column-start: 4; }
+
+/* 11 · Women seats */
+.pv-seatrow {
+  display: flex;
+  gap: 6px;
+}
+
+.pv-ladies {
+  border-color: var(--seat-ladies-border);
+  background: var(--seat-ladies);
+  color: var(--seat-ladies-text);
+}
+
+/* 12 · Seat pricing */
+.pv-seatprice {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.pv-seatprice__item {
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  padding: 12px 8px;
+}
+
+.pv-seatprice__item.is-on {
+  border-color: var(--color-primary);
+}
+
+/* 13 · Boarding timeline */
+.pv-timeline {
+  display: grid;
+  gap: 6px;
+}
+
+.pv-timeline__stop {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.pv-timeline__stop:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 17px;
+  bottom: -10px;
+  width: 2px;
+  background: var(--color-border);
+}
+
+.pv-timeline__dot {
+  width: 10px;
+  height: 10px;
+  flex-shrink: 0;
+  border: 2px solid var(--color-border-strong);
+  border-radius: 50%;
+  background: var(--color-bg-elevated);
+}
+
+.pv-timeline__stop.is-on b { color: var(--color-primary); }
+
+.pv-timeline__stop.is-on .pv-timeline__dot {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+}
+
+/* 14 · Saved travellers */
+.pv-add {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* 15 · Group booking */
+.pv-counter {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pv-counter > span {
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+}
+
+.pv-counter > span.is-on {
+  border-color: transparent;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.pv-counter b { font-size: 13px; }
+
+.pv-avatars { display: flex; gap: 4px; }
+.pv-avatars > :nth-child(2) { background: var(--color-primary); color: var(--color-on-primary); }
+.pv-avatars > :nth-child(3) { background: var(--color-success); color: var(--color-on-success); }
+.pv-avatars > :nth-child(4) { background: var(--color-info); color: #fff; }
+
+/* 16 · Hold timer */
+.pv-hold {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  line-height: 1.1;
+}
+
+.pv-hold b { font-size: 14px; }
+
+/* Bus photos: one large + two small tiles */
+.pv-photos {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 6px;
+  height: 128px;
+}
+
+.pv-photo {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 2px;
+  border-radius: 10px;
+  color: var(--color-primary);
+}
+
+.pv-photo small {
+  font-size: 10px;
+  color: var(--color-text-muted);
+}
+
+.pv-photo--1 {
+  grid-row: span 2;
+  background: color-mix(in oklab, var(--color-primary) 18%, var(--color-bg-elevated));
+}
+
+.pv-photo--2 { background: color-mix(in oklab, var(--color-accent) 18%, var(--color-bg-elevated)); color: var(--color-accent); }
+.pv-photo--3 { background: color-mix(in oklab, var(--color-primary) 10%, var(--color-bg-elevated)); }
+
+.pv-photos__count {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+}

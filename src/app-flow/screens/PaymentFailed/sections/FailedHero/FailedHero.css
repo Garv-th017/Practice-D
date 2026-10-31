@@ -1,0 +1,31 @@
+.failed-hero {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  padding-top: 16px;
+  text-align: center;
+}
+
+.failed-hero__badge {
+  display: grid;
+  place-items: center;
+  width: 76px;
+  height: 76px;
+  margin-bottom: 8px;
+  border-radius: 50%;
+  background: var(--color-danger);
+  color: var(--color-on-danger);
+  box-shadow: 0 0 0 10px var(--color-danger-soft);
+  animation: pop-in var(--dur-slow) var(--ease-spring) both 100ms;
+}
+
+.failed-hero h1 {
+  font-size: 22px;
+  line-height: 1.15;
+}
+
+.failed-hero p {
+  max-width: 240px;
+  font-size: 12px;
+  color: var(--color-text-muted);
+}

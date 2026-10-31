@@ -1,0 +1,24 @@
+.otp-resend {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+}
+
+.otp-resend__wait {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.otp-resend__time {
+  font-family: var(--font-mono);
+  font-weight: 700;
+}
+
+.otp-resend__btn {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.otp-resend__btn:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

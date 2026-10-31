@@ -1,0 +1,26 @@
+.splash-brand {
+  display: grid;
+  flex: 1;
+  place-content: center;
+  justify-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.splash-brand__mark {
+  margin-bottom: 8px;
+  animation: pop-in var(--dur-slow) var(--ease-spring) both 150ms;
+}
+
+.splash-brand__name {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1;
+  animation: fade-up var(--dur-slow) var(--ease-out) both 350ms;
+}
+
+.splash-brand__tagline {
+  font-size: 13px;
+  opacity: 0.85;
+  animation: fade-up var(--dur-slow) var(--ease-out) both 450ms;
+}

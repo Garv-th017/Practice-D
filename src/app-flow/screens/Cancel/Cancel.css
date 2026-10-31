@@ -1,0 +1,24 @@
+.cancel__body {
+  gap: 18px;
+}
+
+.cancel__refund {
+  display: grid;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.cancel__confirm {
+  flex: 1;
+  height: 46px;
+  border-radius: 14px;
+  background: var(--color-danger);
+  color: var(--color-on-danger);
+  font-size: 14px;
+  font-weight: 700;
+  transition: opacity var(--dur-fast) var(--ease-out);
+}
+
+.cancel__confirm:disabled {
+  opacity: 0.45;
+}

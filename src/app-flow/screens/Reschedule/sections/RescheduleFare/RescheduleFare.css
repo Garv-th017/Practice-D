@@ -1,0 +1,10 @@
+.reschedule-fare {
+  display: grid;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.reschedule-fare__note {
+  font-size: 11.5px;
+  color: var(--color-text-muted);
+}

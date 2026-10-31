@@ -1,0 +1,15 @@
+.permission-list {
+  display: grid;
+  gap: 10px;
+}
+
+.permission {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: border-color var(--dur-fast) var(--ease-out);
+}
+
+.permission.is-on {
+  border-color: var(--color-success);
+}

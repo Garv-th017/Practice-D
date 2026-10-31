@@ -1,0 +1,45 @@
+/* The BusTopia mark: a minimal bus driving along a road */
+.bus-mark {
+  --bm-tile: var(--color-primary);
+  --bm-ink: var(--color-on-primary);
+
+  flex-shrink: 0;
+}
+
+.bus-mark--inverse {
+  --bm-tile: var(--color-on-primary);
+  --bm-ink: var(--color-primary);
+}
+
+.bus-mark__tile { fill: var(--bm-tile); }
+.bus-mark__body { fill: var(--bm-ink); }
+.bus-mark__window { fill: var(--bm-tile); }
+
+.bus-mark__wheel {
+  fill: var(--color-accent);
+  stroke: var(--bm-tile);
+  stroke-width: 1.5;
+}
+
+.bus-mark__road {
+  fill: none;
+  stroke: var(--bm-ink);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-dasharray: 4 3;
+  opacity: 0.55;
+  animation: bus-mark-road 0.6s linear infinite;
+}
+
+.bus-mark__bus {
+  animation: bus-mark-bump 0.6s ease-in-out infinite alternate;
+}
+
+@keyframes bus-mark-road {
+  to { stroke-dashoffset: 7; }
+}
+
+@keyframes bus-mark-bump {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-0.6px); }
+}

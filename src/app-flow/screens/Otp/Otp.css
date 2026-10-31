@@ -1,0 +1,48 @@
+.otp {
+  gap: 18px;
+}
+
+.otp .app-bar {
+  margin-bottom: 0;
+}
+
+.otp__head {
+  display: grid;
+  gap: 6px;
+}
+
+.otp__icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 8px;
+  border-radius: 16px;
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+.otp__head h1 {
+  font-size: 22px;
+  line-height: 1.15;
+}
+
+.otp__head p {
+  color: var(--color-text-muted);
+}
+
+.otp__head b {
+  color: var(--color-text);
+}
+
+.otp__actions {
+  display: grid;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.otp__hint {
+  font-size: 11px;
+  text-align: center;
+  color: var(--color-text-subtle);
+}

@@ -1,0 +1,13 @@
+.confirmed__body {
+  gap: 20px;
+}
+
+.confirmed__return {
+  border-color: var(--color-success);
+}
+
+.confirmed__actions {
+  display: grid;
+  flex: 1;
+  gap: 8px;
+}

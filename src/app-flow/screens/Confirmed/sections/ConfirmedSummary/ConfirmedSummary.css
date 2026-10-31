@@ -1,0 +1,12 @@
+.confirmed-summary__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 12px;
+  font-size: 12px;
+  text-align: right;
+}
+
+.confirmed-summary__row + .confirmed-summary__row {
+  border-top: 1px solid var(--color-border);
+}

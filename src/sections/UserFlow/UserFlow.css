@@ -1,0 +1,65 @@
+.uf__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-10);
+}
+
+.uf__head {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.uf__title {
+  font-size: var(--text-3xl);
+}
+
+.uf__lead {
+  color: var(--color-text-muted);
+}
+
+/* One-line key for the arrows */
+.uf__key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.uf__key li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.uf__key li::before {
+  content: "";
+  width: 24px;
+  border-top: 2px solid var(--color-primary);
+}
+
+.uf__key li.uf__key-alt::before {
+  border-top: 2px dashed var(--color-border-strong);
+}
+
+.uf__key li.uf__key-error::before {
+  border-top: 2px dashed var(--color-danger);
+}
+
+/* The diagram needs room; phones get a list instead */
+.uf__list {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .uf__map {
+    display: none;
+  }
+
+  .uf__list {
+    display: block;
+  }
+}

@@ -1,0 +1,10 @@
+.settings-alert {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 12px;
+}
+
+.settings-alert + .settings-alert {
+  border-top: 1px solid var(--color-border);
+}

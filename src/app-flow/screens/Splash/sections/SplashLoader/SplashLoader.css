@@ -1,0 +1,38 @@
+.splash-loader {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.splash-loader__track {
+  width: 140px;
+  height: 4px;
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--color-on-primary) 25%, transparent);
+  overflow: hidden;
+}
+
+.splash-loader__fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--color-on-primary);
+  transform-origin: left;
+  animation: splash-load 2.4s var(--ease-in-out) both 200ms;
+}
+
+@keyframes splash-load {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+.splash-loader__text {
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+.splash-loader__version {
+  font-size: 11px;
+  opacity: 0.6;
+}

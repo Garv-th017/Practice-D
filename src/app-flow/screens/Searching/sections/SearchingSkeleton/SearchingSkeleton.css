@@ -1,0 +1,21 @@
+.searching-skeleton {
+  display: grid;
+  gap: 10px;
+}
+
+.searching-skeleton__card {
+  display: grid;
+  gap: 10px;
+}
+
+.searching-skeleton__line {
+  height: 11px;
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, transparent 0%, color-mix(in srgb, var(--color-bg-elevated) 70%, transparent) 50%, transparent 100%) 0 0 / 200% 100%,
+    var(--color-bg-sunken);
+  animation: shimmer 1.4s linear infinite;
+}
+
+.searching-skeleton__line.is-wide { width: 70%; }
+.searching-skeleton__line.is-short { width: 40%; }

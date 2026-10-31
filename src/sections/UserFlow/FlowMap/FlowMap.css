@@ -1,0 +1,96 @@
+/* No scroll area of its own: the map shrinks to fit and the page scrolls */
+.uf-map {
+  position: relative;
+  margin-inline: auto;
+  transform-origin: top left;
+}
+
+/* Journey name above each row */
+.uf-lane {
+  position: absolute;
+  left: 64px;
+  font-size: var(--text-lg);
+}
+
+/* ---------- Links ---------- */
+.uf-edges {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.uf-edge {
+  fill: none;
+  stroke-width: 1.5;
+  transition: opacity var(--dur-base) var(--ease-out);
+}
+
+.uf-edge--main {
+  stroke: var(--color-primary);
+  stroke-width: 2;
+}
+
+.uf-edge--alt {
+  stroke: var(--color-border-strong);
+  stroke-dasharray: 5 4;
+}
+
+.uf-edge--error {
+  stroke: var(--color-danger);
+  stroke-dasharray: 5 4;
+}
+
+.uf-arrow--main { fill: var(--color-primary); }
+.uf-arrow--alt { fill: var(--color-border-strong); }
+.uf-arrow--error { fill: var(--color-danger); }
+
+/* Hover a screen: its links stay, the rest fade */
+.uf-map.has-hot .uf-edge:not(.is-hot) {
+  opacity: 0.12;
+}
+
+/* ---------- Screens ---------- */
+.uf-node {
+  position: absolute;
+  transition: opacity var(--dur-base) var(--ease-out);
+}
+
+.uf-node.is-dim {
+  opacity: 0.35;
+}
+
+.uf-node__shot {
+  border-radius: 14px;
+  outline: 2px solid transparent;
+  outline-offset: 3px;
+  transition: outline-color var(--dur-fast) var(--ease-out);
+}
+
+/* Loading, error and overlay screens get a dashed frame */
+.uf-node.is-state .uf-node__shot .wf-edge {
+  stroke-dasharray: 4 3;
+}
+
+.uf-node:hover .uf-node__shot,
+.uf-node.is-selected .uf-node__shot {
+  outline-color: var(--color-primary);
+}
+
+.uf-node__title {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.uf-node__hit {
+  position: absolute;
+  inset: -4px;
+  border-radius: 16px;
+}
+
+.uf-node__hit:focus-visible {
+  outline: none;
+  box-shadow: var(--ring-focus);
+}

@@ -1,0 +1,31 @@
+.wallet-offers {
+  display: grid;
+  gap: 8px;
+}
+
+.wallet-offer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px dashed var(--color-border-strong);
+  border-radius: 12px;
+  background: var(--color-bg-elevated);
+}
+
+.wallet-offer__code {
+  flex-shrink: 0;
+  padding: 5px 8px;
+  border: 1px solid var(--color-primary);
+  border-radius: 7px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.wallet-offer__code.is-copied {
+  border-color: var(--color-success);
+  background: var(--color-success-soft);
+  color: var(--color-success);
+}

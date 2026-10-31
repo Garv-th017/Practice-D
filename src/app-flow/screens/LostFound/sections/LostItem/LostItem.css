@@ -1,0 +1,10 @@
+.lost-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.lost-items__chip {
+  justify-content: center;
+  border-radius: 10px;
+}

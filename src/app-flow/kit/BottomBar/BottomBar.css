@@ -1,0 +1,32 @@
+.bottom-bar {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px 24px;
+  border-top: 1px solid var(--color-border);
+  background: var(--color-bg-elevated);
+}
+
+.bottom-bar__info {
+  display: grid;
+  flex-shrink: 0;
+  line-height: 1.15;
+}
+
+.bottom-bar__info small {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.bottom-bar__info b {
+  font-family: var(--font-display);
+  font-size: 18px;
+}
+
+.bottom-bar__action {
+  display: flex;
+  flex: 1;
+  gap: 8px;
+}

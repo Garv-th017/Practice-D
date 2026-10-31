@@ -1,0 +1,146 @@
+.notice-groups {
+  display: grid;
+  gap: 18px;
+}
+
+.notice-group {
+  display: grid;
+  gap: 8px;
+}
+
+.notice-group__day {
+  padding-left: 2px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+}
+
+/* One card per day, rows separated by hairlines */
+.notice-group__list {
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  background: var(--color-bg-elevated);
+  overflow: hidden;
+}
+
+.notice-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 0;
+  padding: 12px;
+  transition: background-color var(--dur-base) var(--ease-out);
+}
+
+.notice-row + .notice-row {
+  border-top: 1px solid var(--color-border);
+}
+
+.notice-row.is-unread {
+  background: var(--color-primary-faint);
+}
+
+/* Icon with the unread dot as a small badge, so nothing collides with the text */
+.notice-row__icon {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+}
+
+.notice-row__icon.is-trip {
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+.notice-row__icon.is-offer {
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+}
+
+.notice-row__icon.is-warning {
+  background: var(--color-warning-soft);
+  color: var(--color-text);
+}
+
+.notice-row__dot {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--color-bg-elevated);
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.notice-row__body {
+  display: grid;
+  flex: 1;
+  gap: 6px;
+  min-width: 0;
+}
+
+/* Buttons don't shrink by default: width + min-width let the text wrap */
+.notice-row__main {
+  display: grid;
+  gap: 3px;
+  width: 100%;
+  min-width: 0;
+  text-align: left;
+}
+
+.notice-row__title {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.notice-row.is-unread .notice-row__title {
+  font-weight: 700;
+}
+
+.notice-row__text {
+  display: -webkit-box;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--color-text-muted);
+  overflow-wrap: anywhere;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.notice-row__foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px 10px;
+}
+
+.notice-row__when {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.notice-row__action {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  margin: -8px -4px;
+  padding: 8px 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+
+.notice-row__action:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

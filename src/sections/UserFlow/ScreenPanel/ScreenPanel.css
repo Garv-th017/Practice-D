@@ -1,0 +1,133 @@
+/* Floats beside the diagram on desktop, a bottom sheet on phones */
+.uf-panel {
+  position: fixed;
+  top: 88px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  width: min(360px, calc(100vw - 32px));
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background: var(--color-bg-elevated);
+  box-shadow: var(--shadow-lg);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.uf-panel__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.uf-panel__head h2 {
+  font-size: var(--text-xl);
+  outline: none;
+}
+
+.uf-panel__close {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--color-text-muted);
+  transition: background-color var(--dur-fast) var(--ease-out);
+}
+
+.uf-panel__close:hover {
+  background: var(--color-bg-sunken);
+  color: var(--color-text);
+}
+
+.uf-panel__purpose {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.uf-panel__wire {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  align-items: start;
+  gap: 26px;
+}
+
+.uf-panel__group {
+  display: grid;
+  gap: 8px;
+}
+
+.uf-panel__group h3 {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.uf-links {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.uf-links li + li {
+  border-top: 1px solid var(--color-border);
+}
+
+.uf-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  padding: 6px 0;
+  text-align: left;
+}
+
+.uf-link:hover b {
+  color: var(--color-primary);
+}
+
+.uf-link > svg {
+  flex-shrink: 0;
+  color: var(--color-text-subtle);
+}
+
+.uf-link__text {
+  display: grid;
+  flex: 1;
+  min-width: 0;
+}
+
+.uf-link__text b {
+  font-size: var(--text-sm);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.uf-link__text small {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.uf-panel__open {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+@media (max-width: 900px) {
+  .uf-panel {
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    max-height: 85dvh;
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  }
+}

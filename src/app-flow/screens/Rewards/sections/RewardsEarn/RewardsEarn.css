@@ -1,0 +1,23 @@
+.rewards-earn {
+  display: grid;
+  gap: 8px;
+}
+
+.rewards-earn__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+}
+
+.rewards-earn__item .icon {
+  color: var(--color-primary);
+}
+
+.rewards-earn__item b {
+  font-size: 12px;
+  color: var(--color-success);
+}

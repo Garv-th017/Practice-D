@@ -1,0 +1,134 @@
+/* 43 · Reviews */
+.pv-review { justify-items: center; }
+
+.pv-stars {
+  display: flex;
+  gap: 4px;
+}
+
+.pv-star { color: var(--color-border-strong); }
+.pv-star.is-on { color: var(--color-accent); }
+
+.pv-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+}
+
+/* 44 · Cancellation */
+.pv-refund {
+  font-size: 14px;
+  color: var(--color-success);
+}
+
+/* 45 · Refund steps */
+.pv-steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.pv-steps__line {
+  position: absolute;
+  top: 8px;
+  left: 16.66%;
+  right: 16.66%;
+  height: 2px;
+  background: var(--color-border);
+}
+
+.pv-steps__fill {
+  display: block;
+  width: 75%;
+  height: 100%;
+  background: var(--color-primary);
+  transform-origin: left;
+}
+
+.fcard.is-visible .pv-steps__fill { animation: mini-fill 1.2s var(--ease-out) 0.4s both; }
+
+.pv-steps__step {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 3px;
+}
+
+.pv-steps__dot {
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--color-border-strong);
+  border-radius: 50%;
+  background: var(--color-bg-elevated);
+}
+
+.pv-steps__step.is-done .pv-steps__dot {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.pv-steps__step.is-now .pv-steps__dot {
+  border-color: var(--color-primary);
+}
+
+/* 46 · Chat */
+.pv-chat {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pv-chat__msg {
+  align-self: flex-start;
+  max-width: 82%;
+  padding: 6px 9px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px 12px 12px 4px;
+  background: var(--color-bg-elevated);
+}
+
+.pv-chat__msg--me {
+  align-self: flex-end;
+  border-color: transparent;
+  border-radius: 12px 12px 4px 12px;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.pv-chat__typing {
+  display: inline-flex;
+  align-self: flex-start;
+  gap: 3px;
+  padding: 8px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-bg-elevated);
+}
+
+.pv-chat__typing i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-text-subtle);
+  animation: pv-typing 1.2s ease-in-out infinite;
+}
+
+.pv-chat__typing i:nth-child(2) { animation-delay: 0.15s; }
+.pv-chat__typing i:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes pv-typing {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.5; }
+  30% { transform: translateY(-3px); opacity: 1; }
+}
+
+/* 47 · Lost & found */
+.pv-field {
+  display: grid;
+  padding: 4px 8px;
+  border: 1px solid var(--color-border);
+  border-radius: 7px;
+}

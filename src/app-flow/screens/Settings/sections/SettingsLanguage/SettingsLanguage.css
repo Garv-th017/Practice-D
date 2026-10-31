@@ -1,0 +1,11 @@
+.settings-languages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.settings-languages__chip {
+  justify-content: center;
+  padding-block: 8px;
+  border-radius: 10px;
+}

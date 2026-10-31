@@ -1,0 +1,30 @@
+.wallet-entry {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  font-size: 12px;
+}
+
+.wallet-entry + .wallet-entry {
+  border-top: 1px solid var(--color-border);
+}
+
+.wallet-entry__icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+.wallet-entry__icon.is-in {
+  background: var(--color-success-soft);
+  color: var(--color-success);
+}
+
+.wallet-entry__icon.is-out {
+  background: var(--color-bg-sunken);
+  color: var(--color-text-muted);
+}

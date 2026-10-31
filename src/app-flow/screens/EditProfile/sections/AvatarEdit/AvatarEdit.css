@@ -1,0 +1,26 @@
+.avatar-edit {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+}
+
+.avatar-edit__photo {
+  display: grid;
+  place-items: center;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.avatar-edit__photo.is-photo {
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+.avatar-edit__btn {
+  justify-self: center;
+}

@@ -1,0 +1,41 @@
+.trip-list {
+  display: grid;
+  gap: 10px;
+}
+
+.trip-list__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.trip-list__item.is-link {
+  transition: border-color var(--dur-fast) var(--ease-out);
+}
+
+.trip-list__item.is-link:hover {
+  border-color: var(--color-primary);
+}
+
+.trip-list__status {
+  flex-shrink: 0;
+  padding: 3px 8px;
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.trip-list__status.is-success {
+  background: var(--color-success-soft);
+  color: var(--color-success);
+}
+
+.trip-list__status.is-muted {
+  background: var(--color-bg-sunken);
+  color: var(--color-text-muted);
+}
+
+.trip-list__status.is-danger {
+  background: var(--color-danger-soft);
+  color: var(--color-danger);
+}

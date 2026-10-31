@@ -1,0 +1,30 @@
+.return-date {
+  display: grid;
+  justify-items: center;
+  flex-shrink: 0;
+  width: 56px;
+  padding: 8px 0;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-bg-elevated);
+  line-height: 1.25;
+}
+
+.return-date b {
+  font-size: 15px;
+}
+
+.return-date small {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.return-date.is-on {
+  border-color: transparent;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.return-date.is-on small {
+  color: inherit;
+}

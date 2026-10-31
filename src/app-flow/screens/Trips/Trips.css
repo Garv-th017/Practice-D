@@ -1,0 +1,17 @@
+.trips__body {
+  gap: 14px;
+}
+
+.trips__plan {
+  display: grid;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 16px;
+  border: 1px dashed var(--color-border-strong);
+  border-radius: 14px;
+  text-align: center;
+}
+
+.trips__plan .app-btn {
+  margin-top: 6px;
+}

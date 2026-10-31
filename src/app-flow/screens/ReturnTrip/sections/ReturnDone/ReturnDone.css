@@ -1,0 +1,28 @@
+.return-done {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  padding-top: 28px;
+  text-align: center;
+}
+
+.return-done b {
+  font-size: 18px;
+}
+
+.return-done p {
+  max-width: 240px;
+}
+
+.return-done__badge {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  margin-bottom: 8px;
+  border-radius: 50%;
+  background: var(--color-success);
+  color: var(--color-on-success);
+  box-shadow: 0 0 0 10px var(--color-success-soft);
+  animation: pop-in var(--dur-slow) var(--ease-spring) both;
+}

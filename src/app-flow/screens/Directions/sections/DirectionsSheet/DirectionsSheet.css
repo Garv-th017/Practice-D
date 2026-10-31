@@ -1,0 +1,47 @@
+.dir-sheet {
+  display: grid;
+  flex-shrink: 0;
+  gap: 12px;
+  padding: 14px 16px 26px;
+  border-top: 1px solid var(--color-border);
+  background: var(--color-bg);
+}
+
+.dir-sheet__depart {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border-radius: 12px;
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  font-size: 12px;
+}
+
+.dir-sheet__depart .k-grow {
+  display: block;
+  color: var(--color-text);
+}
+
+.dir-sheet__steps {
+  display: grid;
+  gap: 10px;
+}
+
+.dir-sheet__steps li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12.5px;
+}
+
+.dir-sheet__step-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  background: var(--color-bg-sunken);
+  color: var(--color-text-muted);
+}

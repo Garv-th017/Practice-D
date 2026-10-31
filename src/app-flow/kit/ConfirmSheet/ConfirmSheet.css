@@ -1,0 +1,83 @@
+.confirm-sheet {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.confirm-sheet__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgb(0 0 0 / 0.4);
+  animation: confirm-fade var(--dur-base) var(--ease-out) both;
+}
+
+.confirm-sheet__panel {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  padding: 22px 18px 28px;
+  border-radius: 22px 22px 0 0;
+  background: var(--color-bg-elevated);
+  text-align: center;
+  animation: confirm-up var(--dur-slow) var(--ease-out) both;
+}
+
+.confirm-sheet__icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 4px;
+  border-radius: 50%;
+}
+
+.confirm-sheet__icon.is-danger {
+  background: var(--color-danger-soft);
+  color: var(--color-danger);
+}
+
+.confirm-sheet__icon.is-primary {
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+.confirm-sheet__title {
+  font-size: 16px;
+}
+
+.confirm-sheet__text {
+  max-width: 240px;
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+}
+
+.confirm-sheet__confirm {
+  width: 100%;
+  height: 46px;
+  margin-top: 8px;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.confirm-sheet__confirm.is-danger {
+  background: var(--color-danger);
+  color: var(--color-on-danger);
+}
+
+.confirm-sheet__confirm.is-primary {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+@keyframes confirm-fade {
+  from { opacity: 0; }
+}
+
+@keyframes confirm-up {
+  from { transform: translateY(100%); }
+}

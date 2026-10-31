@@ -1,0 +1,44 @@
+/* Top bar for full app screens: 44px reserved for the phone status bar */
+.top-bar {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 10px;
+  padding: 52px 16px 10px;
+  background: var(--color-bg);
+}
+
+.top-bar__btn {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: var(--color-bg-elevated);
+  transition: border-color var(--dur-fast) var(--ease-out);
+}
+
+.top-bar__btn:hover {
+  border-color: var(--color-border-strong);
+}
+
+.top-bar__text {
+  display: grid;
+  flex: 1;
+  min-width: 0;
+  line-height: 1.2;
+}
+
+.top-bar__text b {
+  overflow: hidden;
+  font-size: 15px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.top-bar__text small {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}

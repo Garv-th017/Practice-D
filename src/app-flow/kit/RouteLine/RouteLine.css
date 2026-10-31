@@ -1,0 +1,79 @@
+.route-line {
+  display: grid;
+  gap: 6px;
+  width: 100%;
+}
+
+.route-line__track {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 30px;
+}
+
+.route-line__start {
+  flex-shrink: 0;
+  width: 12px;
+  height: 12px;
+  border: 3px solid var(--color-primary);
+  border-radius: 50%;
+}
+
+.route-line__end {
+  flex-shrink: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.route-line__road {
+  position: relative;
+  flex: 1;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-border-strong) 50%, transparent 50%) 0 0 / 10px 3px repeat-x;
+}
+
+.route-line__done {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: calc(var(--p) * 100%);
+  border-radius: 3px;
+  background: var(--color-primary);
+}
+
+.route-line__bus {
+  position: absolute;
+  top: 50%;
+  left: calc(var(--p) * 100%);
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border: 3px solid var(--color-bg);
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  translate: -50% -50%;
+}
+
+.route-line.is-moving .route-line__done {
+  display: none;
+}
+
+.route-line.is-moving .route-line__bus {
+  animation: route-line-drive 1.8s var(--ease-in-out) infinite alternate;
+}
+
+@keyframes route-line-drive {
+  from { left: 6%; }
+  to { left: 94%; }
+}
+
+.route-line__labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}

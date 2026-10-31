@@ -1,0 +1,33 @@
+.trip-summary {
+  display: grid;
+  gap: 10px;
+}
+
+.trip-summary__route {
+  font-size: 14px;
+}
+
+.trip-summary__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 12px;
+}
+
+.trip-summary__list div {
+  display: grid;
+  line-height: 1.25;
+}
+
+.trip-summary__list dt {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.trip-summary__list dd {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.trip-summary__wide {
+  grid-column: 1 / -1;
+}

@@ -1,0 +1,91 @@
+.seat-map {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  padding: 12px 14px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 22px 22px 14px 14px;
+  background: var(--color-bg-elevated);
+}
+
+.seat-map__driver {
+  justify-self: end;
+  padding: 3px 9px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.seat-map__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 38px) 20px repeat(2, 38px);
+  gap: 8px;
+}
+
+.seat-map__grid:not(.seat-map__grid--sleeper) > :nth-child(4n + 3) {
+  grid-column-start: 4;
+}
+
+/* Sleeper: one berth, aisle, two berths. Berths are long and narrow. */
+.seat-map__grid--sleeper {
+  grid-template-columns: 44px 26px repeat(2, 44px);
+}
+
+.seat-map__grid--sleeper > :nth-child(3n + 2) {
+  grid-column-start: 3;
+}
+
+.seat-map__grid--sleeper .seat-map__seat {
+  height: 58px;
+  border-radius: 10px;
+}
+
+.seat-map__seat {
+  height: 36px;
+  border: 1.5px solid var(--seat-available-border);
+  border-radius: 9px 9px 5px 5px;
+  background: var(--seat-available);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  transition:
+    background-color var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out);
+}
+
+.seat-map__seat:not(:disabled):hover {
+  border-color: var(--color-primary);
+}
+
+.seat-map__seat.is-ladies {
+  border-color: var(--seat-ladies-border);
+  background: var(--seat-ladies);
+}
+
+.seat-map__seat.is-selected {
+  border-color: var(--seat-selected-border);
+  background: var(--seat-selected);
+  color: var(--color-on-primary);
+}
+
+.seat-map__seat.is-ladies.is-selected {
+  background: var(--seat-ladies-border);
+  color: #3b0021;
+}
+
+.seat-map__seat.is-booked {
+  border-color: var(--color-border-strong);
+  background: repeating-linear-gradient(135deg, var(--color-border-strong) 0 1.5px, transparent 1.5px 5px), var(--seat-booked);
+  color: transparent;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.seat-map__limit {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-danger);
+}

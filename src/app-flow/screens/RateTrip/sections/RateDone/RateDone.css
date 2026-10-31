@@ -1,0 +1,27 @@
+.rate-done {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  padding-top: 28px;
+  text-align: center;
+}
+
+.rate-done b {
+  font-size: 17px;
+}
+
+.rate-done p {
+  max-width: 230px;
+}
+
+.rate-done__badge {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  margin-bottom: 8px;
+  border-radius: 50%;
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  animation: pop-in var(--dur-slow) var(--ease-spring) both;
+}

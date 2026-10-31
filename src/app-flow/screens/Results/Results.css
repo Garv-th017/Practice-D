@@ -1,0 +1,19 @@
+.results-edit {
+  flex-shrink: 0;
+  padding: 8px 14px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-pill);
+  background: var(--color-bg-elevated);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.results-edit:hover {
+  border-color: var(--color-primary);
+}
+
+/* Room for the floating sort and filter button */
+.results__body {
+  padding-bottom: 84px;
+}

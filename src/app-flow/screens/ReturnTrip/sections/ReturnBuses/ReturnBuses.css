@@ -1,0 +1,27 @@
+.return-buses {
+  display: grid;
+  gap: 8px;
+}
+
+.return-bus {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-bg-elevated);
+  text-align: left;
+  transition: border-color var(--dur-fast) var(--ease-out);
+}
+
+.return-bus.is-on {
+  border-color: var(--color-primary);
+}
+
+.return-bus__price {
+  display: grid;
+  justify-items: end;
+  gap: 4px;
+}

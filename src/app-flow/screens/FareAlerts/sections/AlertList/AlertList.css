@@ -1,0 +1,13 @@
+.alert-item {
+  display: grid;
+  gap: 8px;
+  transition: opacity var(--dur-fast) var(--ease-out);
+}
+
+.alert-item.is-off {
+  opacity: 0.65;
+}
+
+.alert-item__remove {
+  color: var(--color-danger);
+}

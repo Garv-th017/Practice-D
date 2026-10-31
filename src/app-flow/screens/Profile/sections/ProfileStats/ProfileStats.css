@@ -1,0 +1,30 @@
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  background: var(--color-bg-elevated);
+}
+
+.profile-stats__item {
+  display: grid;
+  justify-items: center;
+  padding: 12px 4px;
+  transition: background-color var(--dur-fast) var(--ease-out);
+}
+
+.profile-stats__item:hover {
+  background: var(--color-bg-sunken);
+}
+
+.profile-stats__item:first-child { border-radius: 14px 0 0 14px; }
+.profile-stats__item:last-child { border-radius: 0 14px 14px 0; }
+
+.profile-stats__item + .profile-stats__item {
+  border-left: 1px solid var(--color-border);
+}
+
+.profile-stats__item b {
+  font-family: var(--font-display);
+  font-size: 17px;
+}

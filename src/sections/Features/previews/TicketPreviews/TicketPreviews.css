@@ -1,0 +1,123 @@
+/* 25 · E-ticket */
+.pv-ticket {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-bg-elevated);
+}
+
+.pv-ticket__main {
+  display: grid;
+  gap: 1px;
+  padding: 10px 12px;
+  border-right: 1.5px dashed var(--color-border-strong);
+}
+
+.pv-ticket__pnr {
+  margin-top: 3px;
+  font-size: 10px;
+  color: var(--color-primary);
+}
+
+.pv-ticket__qr {
+  position: relative;
+  display: grid;
+  place-items: center;
+  align-self: stretch;
+  padding: 10px 12px;
+  color: var(--color-text);
+}
+
+/* punched notches on the tear line */
+.pv-ticket__qr::before,
+.pv-ticket__qr::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: color-mix(in oklab, var(--color-primary) 5%, var(--color-bg));
+  translate: -50% 0;
+}
+
+.pv-ticket__qr::before { top: -7px; }
+.pv-ticket__qr::after { bottom: -7px; }
+
+/* 26 · Message bubble */
+.pv-msg-from { padding-left: 2px; }
+
+.pv-bubble {
+  display: grid;
+  gap: 4px;
+  max-width: 92%;
+  padding: 8px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px 12px 12px 4px;
+  background: var(--color-bg-elevated);
+}
+
+.pv-bubble__meta {
+  display: inline-flex;
+  align-items: center;
+  justify-self: end;
+  gap: 3px;
+  font-size: 10px;
+  color: var(--color-text-muted);
+}
+
+.pv-ticks {
+  display: inline-flex;
+  color: var(--color-info);
+}
+
+.pv-ticks .icon + .icon { margin-left: -6px; }
+
+/* 28 · Calendar */
+.pv-caltile {
+  display: grid;
+  flex-shrink: 0;
+  width: 42px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.pv-caltile span {
+  padding: 2px 0;
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.pv-caltile b {
+  padding: 3px 0 4px;
+  font-family: var(--font-display);
+  font-size: 17px;
+}
+
+.pv-calinfo { gap: 3px; }
+
+/* 29 · Offline */
+.pv-offline-icon {
+  background: var(--color-bg-sunken);
+  color: var(--color-text-muted);
+}
+
+/* 30 · Reschedule */
+.pv-resch__old {
+  color: var(--color-text-muted);
+  text-decoration: line-through;
+}
+
+.pv-resch__new {
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  font-weight: 700;
+}

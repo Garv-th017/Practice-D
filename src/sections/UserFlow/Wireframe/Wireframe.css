@@ -1,0 +1,104 @@
+/* Greyscale on purpose: a wireframe shows structure, not colour.
+   Shades come from the theme's text and surface tokens so dark mode works. */
+.wf {
+  --wf-ink: color-mix(in oklab, var(--color-text) 72%, var(--color-bg-elevated));
+  --wf-mid: color-mix(in oklab, var(--color-text) 34%, var(--color-bg-elevated));
+  --wf-soft: color-mix(in oklab, var(--color-text) 20%, var(--color-bg-elevated));
+  --wf-wash: color-mix(in oklab, var(--color-text) 8%, var(--color-bg-elevated));
+
+  position: relative;
+  aspect-ratio: 120 / 254;
+}
+
+.wf__svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.wf-screen { fill: var(--color-bg-elevated); }
+.wf-edge { fill: none; stroke: var(--wf-mid); stroke-width: 1; vector-effect: non-scaling-stroke; }
+
+.wf-box,
+.wf-stroke,
+.wf-divider,
+.wf-dash,
+.wf-road,
+.wf-route,
+.wf-cross,
+.wf-ring,
+.wf-dashed-box,
+.wf-solid-line {
+  vector-effect: non-scaling-stroke;
+}
+
+.wf-box { fill: var(--color-bg-elevated); stroke: var(--wf-mid); stroke-width: 1; }
+.wf-fill { fill: var(--wf-wash); }
+.wf-solid { fill: var(--wf-ink); }
+.wf-dark { fill: var(--wf-ink); }
+.wf-active { fill: var(--wf-wash); stroke: var(--wf-ink); stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+.wf-alert { fill: var(--color-bg-elevated); stroke: var(--wf-ink); stroke-width: 1.5; stroke-dasharray: 2 1.5; vector-effect: non-scaling-stroke; }
+.wf-line { fill: var(--wf-soft); }
+.wf-strong { fill: var(--wf-mid); }
+.wf-on-solid,
+.wf-on-dark { fill: var(--color-bg-elevated); opacity: 0.8; }
+.wf-stroke { fill: none; stroke: var(--wf-ink); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.wf-divider { stroke: var(--wf-soft); stroke-width: 1; }
+.wf-dash { stroke: var(--wf-mid); stroke-width: 1; stroke-dasharray: 2 2; }
+.wf-solid-line { stroke: var(--wf-ink); stroke-width: 1.5; }
+.wf-dashed-box { fill: none; stroke: var(--wf-mid); stroke-width: 1; stroke-dasharray: 3 2; }
+.wf-cross { stroke: var(--wf-soft); stroke-width: 1; }
+.wf-road { fill: none; stroke: var(--color-bg-elevated); stroke-width: 3; }
+.wf-route { fill: none; stroke: var(--wf-ink); stroke-width: 1.5; stroke-dasharray: 3 2; }
+.wf-ring { fill: none; stroke: var(--wf-ink); stroke-width: 3; }
+.wf-knob { fill: var(--color-bg-elevated); stroke: var(--wf-ink); stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+.wf-qr { fill: var(--wf-ink); }
+.wf-notch { fill: var(--color-bg-sunken); }
+.wf-bar { fill: var(--color-bg-elevated); stroke: var(--wf-soft); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.wf-sheet { fill: var(--color-bg-elevated); }
+.wf-dim { fill: color-mix(in srgb, var(--color-text) 30%, transparent); }
+
+.wf-notes {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--text-sm);
+}
+
+.wf-notes li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wf-notes span {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* Numbered notes on the large wireframe */
+.wf__mark {
+  position: absolute;
+  right: -13px;
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--color-bg-elevated);
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  font-size: 11px;
+  font-weight: 700;
+  translate: 0 -50%;
+}

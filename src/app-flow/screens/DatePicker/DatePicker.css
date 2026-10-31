@@ -1,0 +1,9 @@
+.date-picker .app-body {
+  gap: 16px;
+}
+
+.date-picker__note {
+  padding: 0 4px;
+  font-size: 11.5px;
+  color: var(--color-text-muted);
+}

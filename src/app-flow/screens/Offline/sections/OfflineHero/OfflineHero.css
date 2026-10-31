@@ -1,0 +1,38 @@
+.offline-hero {
+  display: grid;
+  flex: 1;
+  place-content: center;
+  justify-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.offline-hero__icon {
+  display: grid;
+  place-items: center;
+  width: 84px;
+  height: 84px;
+  margin-bottom: 12px;
+  border-radius: 50%;
+  background: var(--color-bg-sunken);
+  color: var(--color-text-muted);
+}
+
+.offline-hero__icon.is-checking {
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  animation: offline-pulse 1s var(--ease-in-out) infinite;
+}
+
+@keyframes offline-pulse {
+  50% { opacity: 0.55; }
+}
+
+.offline-hero h1 {
+  font-size: 23px;
+}
+
+.offline-hero p {
+  max-width: 240px;
+  color: var(--color-text-muted);
+}

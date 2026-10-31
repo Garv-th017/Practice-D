@@ -1,0 +1,95 @@
+.date-cal {
+  display: grid;
+  gap: 12px;
+}
+
+.date-cal__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.date-cal__nav {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+}
+
+.date-cal__nav:disabled {
+  opacity: 0.35;
+}
+
+.date-cal__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+}
+
+.date-cal__weekday {
+  padding-bottom: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--color-text-subtle);
+}
+
+.date-cal__day {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  min-height: 38px;
+  padding: 4px 0;
+  border-radius: 8px;
+  line-height: 1.15;
+  transition: background-color var(--dur-fast) var(--ease-out);
+}
+
+.date-cal__day b {
+  font-size: 12px;
+}
+
+.date-cal__day small {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.date-cal__day:hover:not(:disabled) {
+  background: var(--color-bg-sunken);
+}
+
+.date-cal__day:disabled {
+  color: var(--color-text-subtle);
+  opacity: 0.5;
+}
+
+.date-cal__day.is-low small {
+  font-weight: 700;
+  color: var(--color-success);
+}
+
+.date-cal__day.is-on {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.date-cal__day.is-on small {
+  color: inherit;
+}
+
+.date-cal__legend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.date-cal__swatch {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-success);
+}

@@ -1,0 +1,21 @@
+.bus-gallery__photo {
+  position: relative;
+  flex-shrink: 0;
+  width: 184px;
+  height: 112px;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.bus-gallery__photo figcaption {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  padding: 3px 9px;
+  border-radius: var(--radius-pill);
+  background: var(--color-bg-glass);
+  font-size: 11px;
+  font-weight: 600;
+  backdrop-filter: blur(6px);
+}

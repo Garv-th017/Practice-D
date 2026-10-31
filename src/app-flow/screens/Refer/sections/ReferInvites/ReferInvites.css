@@ -1,0 +1,22 @@
+.refer-invite {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+}
+
+.refer-invite + .refer-invite {
+  border-top: 1px solid var(--color-border);
+}
+
+.refer-invite__avatar {
+  width: 32px;
+  height: 32px;
+  font-size: 11px;
+}
+
+.refer-invite__done {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-success);
+}

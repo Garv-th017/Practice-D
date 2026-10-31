@@ -1,0 +1,139 @@
+/* ==========================================================================
+   BusTopia — Semantic theme tokens
+   Palette: Teal & Sunset. <html data-theme="light|dark"> is set by the
+   inline script in index.html and kept in sync by ThemeProvider.
+   Only the base colours are hand-picked; everything else is DERIVED.
+   ========================================================================== */
+
+/* ---------- Base colours: light ---------- */
+:root {
+  --color-bg: #f3f8f8;
+  --color-bg-elevated: #ffffff;
+  --color-bg-sunken: #e7f0f0;
+  --color-text: #0a1c1e;
+  --color-text-muted: #43585b;
+  --color-border: #d8e5e6;
+  --color-primary: #0a7480;
+  --color-on-primary: #ffffff;
+  --color-accent: #ff7a1a;
+  --color-on-accent: #1f0d00;
+  --color-success: #116f35;
+  --color-warning: #f5a524;
+  --color-danger: #d63339;
+  --color-info: #3b82f6;
+  /* Text on solid success / danger fills */
+  --color-on-success: #ffffff;
+  --color-on-danger: #ffffff;
+}
+
+/* ---------- Base colours: dark ---------- */
+[data-theme="dark"] {
+  --color-bg: #061112;
+  --color-bg-elevated: #0e1c1e;
+  --color-bg-sunken: #030a0b;
+  --color-text: #edf6f6;
+  --color-text-muted: #8fa7a9;
+  --color-border: #1a2d30;
+  --color-primary: #2cc5d3;
+  --color-on-primary: #031314;
+  --color-accent: #ff9547;
+  --color-on-accent: #1f0d00;
+  --color-success: #4ade80;
+  --color-warning: #fbbf24;
+  --color-danger: #ff6b6b;
+  --color-info: #60a5fa;
+  --color-on-success: #04140d;
+  --color-on-danger: #1f0505;
+}
+
+/* ---------- Derived (both modes) ---------- */
+:root {
+  --color-bg-inverse: var(--color-text);
+  --color-text-inverse: var(--color-bg);
+  --color-bg-glass: color-mix(in srgb, var(--color-bg-elevated) 72%, transparent);
+  --color-text-subtle: color-mix(in oklab, var(--color-text-muted) 88%, var(--color-bg));
+  --color-border-strong: color-mix(in oklab, var(--color-border) 65%, var(--color-text));
+
+  --color-primary-hover: color-mix(in oklab, var(--color-primary) 85%, var(--color-text));
+  --color-primary-pressed: color-mix(in oklab, var(--color-primary) 70%, var(--color-text));
+  --color-primary-soft: color-mix(in oklab, var(--color-primary) 12%, var(--color-bg-elevated));
+  --color-primary-faint: color-mix(in oklab, var(--color-primary) 6%, var(--color-bg-elevated));
+
+  --color-accent-hover: color-mix(in oklab, var(--color-accent) 85%, var(--color-bg-elevated));
+  --color-accent-text: color-mix(in oklab, var(--color-accent) 58%, var(--color-text));
+  --color-accent-soft: color-mix(in oklab, var(--color-accent) 16%, var(--color-bg-elevated));
+
+  --color-success-soft: color-mix(in oklab, var(--color-success) 14%, var(--color-bg-elevated));
+  --color-warning-soft: color-mix(in oklab, var(--color-warning) 16%, var(--color-bg-elevated));
+  --color-danger-soft: color-mix(in oklab, var(--color-danger) 14%, var(--color-bg-elevated));
+  --color-info-soft: color-mix(in oklab, var(--color-info) 14%, var(--color-bg-elevated));
+
+  /* Seat map */
+  --seat-available: var(--color-bg-elevated);
+  --seat-available-border: var(--color-border-strong);
+  --seat-selected: var(--color-primary);
+  --seat-selected-border: var(--color-primary-pressed);
+  --seat-booked: var(--color-bg-sunken);
+  --seat-booked-border: var(--color-border);
+  --seat-ladies: color-mix(in oklab, #ec4899 16%, var(--color-bg-elevated));
+  --seat-ladies-border: #ec4899;
+  /* Text-safe versions for words on light or soft fills (AA 4.5:1) */
+  --seat-ladies-text: color-mix(in oklab, #ec4899 58%, var(--color-text));
+
+  /* Glows for hero / phone backdrops */
+  --glow-primary: radial-gradient(closest-side, color-mix(in srgb, var(--color-primary) 22%, transparent), transparent);
+  --glow-accent: radial-gradient(closest-side, color-mix(in srgb, var(--color-accent) 28%, transparent), transparent);
+
+  --shadow-primary: 0 10px 24px -8px color-mix(in srgb, var(--color-primary) 55%, transparent);
+  --shadow-accent: 0 10px 24px -8px color-mix(in srgb, var(--color-accent) 50%, transparent);
+  --ring-focus: 0 0 0 3px var(--color-bg), 0 0 0 5px var(--color-primary);
+}
+
+/* ---------- Light-only ---------- */
+:root,
+[data-theme="light"] {
+  --phone-frame: #111318;
+  --phone-frame-edge: #3a3f4b;
+
+  --shadow-xs: 0 1px 2px rgb(15 17 23 / 0.06);
+  --shadow-sm: 0 2px 6px rgb(15 17 23 / 0.06), 0 1px 2px rgb(15 17 23 / 0.04);
+  --shadow-md: 0 12px 28px -10px rgb(15 17 23 / 0.16), 0 2px 6px rgb(15 17 23 / 0.05);
+  --shadow-lg: 0 28px 56px -20px rgb(15 17 23 / 0.24), 0 6px 14px rgb(15 17 23 / 0.06);
+  --shadow-phone:
+    0 60px 120px -40px color-mix(in srgb, var(--color-primary) 40%, transparent),
+    0 24px 48px -24px rgb(15 17 23 / 0.35);
+
+  color-scheme: light;
+}
+
+/* ---------- Dark-only ---------- */
+[data-theme="dark"] {
+  --phone-frame: #1b1e26;
+  --phone-frame-edge: #3a404e;
+
+  --shadow-xs: 0 1px 2px rgb(0 0 0 / 0.4);
+  --shadow-sm: inset 0 1px 0 rgb(255 255 255 / 0.04), 0 2px 6px rgb(0 0 0 / 0.4);
+  --shadow-md: inset 0 1px 0 rgb(255 255 255 / 0.05), 0 12px 28px -10px rgb(0 0 0 / 0.6);
+  --shadow-lg: inset 0 1px 0 rgb(255 255 255 / 0.06), 0 28px 56px -20px rgb(0 0 0 / 0.7);
+  --shadow-phone:
+    0 60px 120px -40px color-mix(in srgb, var(--color-primary) 35%, transparent),
+    0 24px 48px -24px rgb(0 0 0 / 0.8);
+
+  color-scheme: dark;
+}
+
+/* ---------- Theme switch: circular reveal from the toggle ---------- */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+.theme-reveal::view-transition-new(root) {
+  animation: theme-reveal var(--dur-slower) var(--ease-in-out);
+}
+
+@keyframes theme-reveal {
+  from { clip-path: circle(0 at var(--vt-x, 50%) var(--vt-y, 0)); }
+  to   { clip-path: circle(150vmax at var(--vt-x, 50%) var(--vt-y, 0)); }
+}

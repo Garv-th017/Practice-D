@@ -1,0 +1,28 @@
+.ticket-actions {
+  display: grid;
+  gap: 10px;
+}
+
+.ticket-actions__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.ticket-actions__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 42px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 12px;
+  background: var(--color-bg-elevated);
+  font-size: 12.5px;
+  font-weight: 600;
+  transition: border-color var(--dur-fast) var(--ease-out);
+}
+
+.ticket-actions__btn:hover {
+  border-color: var(--color-text);
+}

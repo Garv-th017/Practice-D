@@ -1,0 +1,14 @@
+.permissions {
+  gap: 20px;
+}
+
+.permissions__actions {
+  display: grid;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.permissions__later {
+  justify-self: center;
+  color: var(--color-text-muted);
+}

@@ -1,0 +1,9 @@
+.payment-failed__body {
+  gap: 20px;
+}
+
+.payment-failed__actions {
+  display: grid;
+  flex: 1;
+  gap: 8px;
+}

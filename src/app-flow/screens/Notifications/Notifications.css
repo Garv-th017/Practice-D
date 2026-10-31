@@ -1,0 +1,7 @@
+.notifications__body {
+  gap: 18px;
+}
+
+.notifications__read {
+  white-space: nowrap;
+}

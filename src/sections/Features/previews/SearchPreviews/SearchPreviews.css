@@ -1,0 +1,117 @@
+.pv-left { justify-items: start; }
+
+/* 1 · Route search */
+.pv-route {
+  position: relative;
+  padding: 2px 10px;
+}
+
+.pv-route__row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 7px 0;
+}
+
+.pv-route__dot {
+  width: 10px;
+  height: 10px;
+  flex-shrink: 0;
+  border: 2.5px solid var(--color-primary);
+  border-radius: 50%;
+}
+
+.pv-route__dot--to {
+  border: 0;
+  background: var(--color-accent);
+}
+
+.pv-route__line {
+  height: 1px;
+  margin-left: 19px;
+  margin-right: 34px;
+  background: var(--color-border);
+}
+
+.pv-route__swap {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  translate: 0 -50%;
+}
+
+.pv-route__swap > span { display: grid; }
+
+/* 2 · Date strip */
+.pv-dates {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+}
+
+.pv-date {
+  display: grid;
+  justify-items: center;
+  gap: 1px;
+  padding: 7px 0;
+  border: 1px solid var(--color-border);
+  border-radius: 9px;
+  background: var(--color-bg-elevated);
+}
+
+.pv-date span { font-size: 10px; color: var(--color-text-muted); }
+.pv-date b { font-size: 13px; }
+.pv-date em { font-size: 10px; font-style: normal; color: var(--color-text-muted); }
+
+.pv-date.is-on {
+  border-color: transparent;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.pv-date.is-on span,
+.pv-date.is-on em { color: inherit; }
+
+/* 7 · Bus result */
+.pv-dash {
+  flex: 1;
+  border-top: 1px dashed var(--color-border-strong);
+}
+
+/* 8 · Price calendar */
+.pv-cal {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+}
+
+.pv-cal__day {
+  display: grid;
+  justify-items: center;
+  padding: 3px 0;
+  border-radius: 5px;
+  background: var(--color-bg-elevated);
+}
+
+.pv-cal__day b { font-size: 10px; }
+.pv-cal__day em { font-size: 10px; font-style: normal; color: var(--color-text-muted); }
+.pv-cal__day.is-low em { color: var(--color-success); font-weight: 700; }
+
+.pv-cal__day.is-on {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.pv-cal__day.is-on em { color: inherit; }
+
+/* 9 · Nearby points */
+.pv-point .icon { color: var(--color-text-subtle); }
+.pv-point.is-on { color: var(--color-primary); font-weight: 700; }
+.pv-point.is-on .icon { color: var(--color-primary); }

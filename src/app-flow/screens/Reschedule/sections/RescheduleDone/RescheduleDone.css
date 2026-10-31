@@ -1,0 +1,27 @@
+.reschedule-done {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  padding-top: 28px;
+  text-align: center;
+}
+
+.reschedule-done b {
+  font-size: 17px;
+}
+
+.reschedule-done p {
+  max-width: 230px;
+}
+
+.reschedule-done__badge {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  margin-bottom: 8px;
+  border-radius: 50%;
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  animation: pop-in var(--dur-slow) var(--ease-spring) both;
+}

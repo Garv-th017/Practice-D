@@ -1,0 +1,117 @@
+.track-sheet {
+  position: relative;
+  display: grid;
+  flex-shrink: 0;
+  gap: 10px;
+  margin-top: -18px;
+  padding: 8px 16px 14px;
+  border-top: 1px solid var(--color-border);
+  border-radius: 20px 20px 0 0;
+  background: var(--color-bg);
+}
+
+.track-sheet__handle {
+  justify-self: center;
+  width: 36px;
+  height: 4px;
+  border-radius: var(--radius-pill);
+  background: var(--color-border-strong);
+}
+
+.track-sheet__live {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-success);
+}
+
+.track-sheet__stops {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.track-sheet__stops::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 12.5%;
+  right: 12.5%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-primary) 33%, var(--color-border) 33%);
+}
+
+.track-sheet__stop {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  text-align: center;
+}
+
+.track-sheet__stop i {
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--color-border-strong);
+  border-radius: 50%;
+  background: var(--color-bg);
+}
+
+.track-sheet__stop.is-done i {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+}
+
+.track-sheet__stop.is-now i {
+  box-shadow: 0 0 0 3px var(--color-primary-soft);
+}
+
+.track-sheet__stop small {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.track-sheet__driver {
+  padding: 8px 10px;
+}
+
+.track-sheet__call {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-success);
+  color: var(--color-on-success);
+}
+
+.track-sheet__actions {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+}
+
+.track-sheet__share {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 42px;
+  border-radius: 12px;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.track-sheet__sos {
+  width: 58px;
+  height: 42px;
+  border: 1.5px solid var(--color-danger);
+  border-radius: 12px;
+  background: var(--color-bg-elevated);
+  color: var(--color-danger);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}

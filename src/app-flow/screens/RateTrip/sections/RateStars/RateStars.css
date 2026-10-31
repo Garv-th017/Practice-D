@@ -1,0 +1,41 @@
+.rate-stars {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  text-align: center;
+}
+
+.rate-stars__question {
+  font-size: 16px;
+}
+
+.rate-stars__row {
+  display: flex;
+  gap: 4px;
+}
+
+.rate-stars__star {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  color: var(--color-border-strong);
+  transition:
+    color var(--dur-fast) var(--ease-out),
+    transform var(--dur-base) var(--ease-spring);
+}
+
+.rate-stars__star.is-on {
+  color: var(--color-accent);
+}
+
+.rate-stars__star:active {
+  transform: scale(0.9);
+}
+
+.rate-stars__label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}

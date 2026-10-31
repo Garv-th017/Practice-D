@@ -1,0 +1,25 @@
+.passenger-forms {
+  display: grid;
+  gap: 10px;
+}
+
+.passenger-form {
+  display: grid;
+  gap: 10px;
+}
+
+.passenger-form__row {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 8px;
+}
+
+.passenger-form__gender {
+  display: grid;
+  gap: 4px;
+}
+
+.passenger-form__gender .seg-tabs button {
+  padding-block: 9px;
+  font-size: 11px;
+}

@@ -1,0 +1,82 @@
+.btn {
+  --btn-bg: var(--color-primary);
+  --btn-fg: var(--color-on-primary);
+  --btn-border: transparent;
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  border: 1.5px solid var(--btn-border);
+  border-radius: var(--radius-pill);
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  font-weight: 600;
+  letter-spacing: var(--tracking-normal);
+  white-space: nowrap;
+  transition:
+    border-color var(--dur-base) var(--ease-out),
+    background-color var(--dur-fast) var(--ease-out);
+}
+
+/* Arrow exits right, re-enters from the left — on hover, and again on click */
+.btn__icon {
+  display: inline-flex;
+  overflow: hidden;
+}
+
+.btn--icon-end:hover .btn__icon > *,
+.btn--icon-end:focus-visible .btn__icon > * {
+  animation: btn-arrow-loop var(--dur-slow) var(--ease-in-out);
+}
+
+.btn--icon-end:active .btn__icon > * {
+  animation: btn-arrow-loop-click var(--dur-slow) var(--ease-in-out);
+}
+
+@keyframes btn-arrow-loop {
+  0%   { transform: translateX(0); opacity: 1; }
+  45%  { transform: translateX(120%); opacity: 0; }
+  46%  { transform: translateX(-120%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+/* identical copy so a click restarts the loop while already hovered */
+@keyframes btn-arrow-loop-click {
+  0%   { transform: translateX(0); opacity: 1; }
+  45%  { transform: translateX(120%); opacity: 0; }
+  46%  { transform: translateX(-120%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+.btn--sm { padding: var(--space-2) var(--space-4); font-size: var(--text-sm); }
+.btn--md { padding: var(--space-3) var(--space-6); font-size: var(--text-base); }
+.btn--lg { padding: var(--space-4) var(--space-8); font-size: var(--text-lg); }
+
+.btn--primary:hover { --btn-bg: var(--color-primary-hover); }
+
+.btn--secondary {
+  --btn-bg: var(--color-bg-inverse);
+  --btn-fg: var(--color-text-inverse);
+}
+
+.btn--accent {
+  --btn-bg: var(--color-accent);
+  --btn-fg: var(--color-on-accent);
+}
+
+.btn--ghost {
+  --btn-bg: transparent;
+  --btn-fg: var(--color-text);
+  --btn-border: var(--color-border-strong);
+}
+
+.btn--ghost:hover {
+  --btn-border: var(--color-text);
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  pointer-events: none;
+}

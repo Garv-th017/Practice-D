@@ -1,0 +1,33 @@
+.reschedule-date {
+  display: grid;
+  justify-items: center;
+  flex-shrink: 0;
+  width: 58px;
+  padding: 8px 0;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-bg-elevated);
+  line-height: 1.25;
+  transition:
+    background-color var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out);
+}
+
+.reschedule-date b {
+  font-size: 15px;
+}
+
+.reschedule-date small {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.reschedule-date.is-on {
+  border-color: transparent;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.reschedule-date.is-on small {
+  color: inherit;
+}

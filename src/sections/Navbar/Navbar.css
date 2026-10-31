@@ -1,0 +1,225 @@
+.nav {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: var(--z-sticky);
+  padding-top: 14px;
+  transition: padding var(--dur-base) var(--ease-out);
+}
+
+.nav.is-scrolled {
+  padding-top: 10px;
+}
+
+/* Transparent at top → floating glass pill once scrolled */
+.nav__bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  height: 64px;
+  padding-inline: 0;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  box-shadow: inset 0 0 0 1px transparent;
+  transition:
+    background-color var(--dur-slow) var(--ease-out),
+    box-shadow var(--dur-slow) var(--ease-out),
+    padding var(--dur-slow) var(--ease-out),
+    height var(--dur-slow) var(--ease-out);
+}
+
+.nav.is-scrolled .nav__bar,
+.nav.is-open .nav__bar {
+  height: 60px;
+  padding-inline: var(--space-4) var(--space-2);
+  background: var(--color-bg-glass);
+  backdrop-filter: blur(16px) saturate(1.5);
+  -webkit-backdrop-filter: blur(16px) saturate(1.5);
+  box-shadow: inset 0 0 0 1px var(--color-border), var(--shadow-md);
+}
+
+.nav.is-open .nav__bar {
+  box-shadow: inset 0 0 0 1px var(--color-border);
+}
+
+/* ---------- Desktop links with sliding hover pill ---------- */
+.nav__links {
+  position: relative;
+  display: flex;
+  gap: 2px;
+  margin-inline: auto;
+}
+
+.nav__pill {
+  position: absolute;
+  inset-block: 0;
+  left: 0;
+  width: var(--pill-w);
+  border-radius: var(--radius-pill);
+  background: var(--color-primary-soft);
+  translate: var(--pill-x) 0;
+  opacity: 0;
+  transition:
+    translate var(--dur-slow) var(--ease-out),
+    width var(--dur-slow) var(--ease-out),
+    opacity var(--dur-base) var(--ease-out);
+}
+
+.nav__pill[data-visible="true"] {
+  opacity: 1;
+}
+
+.nav__link {
+  position: relative;
+  z-index: 1;
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-muted);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.nav__link:hover,
+.nav__link:focus-visible {
+  color: var(--color-primary);
+}
+
+/* Current page (NavLink adds .active) */
+.nav__link.active {
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* ---------- Actions ---------- */
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.nav__burger {
+  position: relative;
+  display: none;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-pill);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+}
+
+.nav__burger span {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--color-text);
+  transition:
+    top var(--dur-base) var(--ease-out),
+    transform var(--dur-slow) var(--ease-spring),
+    right var(--dur-base) var(--ease-out);
+}
+
+.nav__burger span:first-child { top: 16px; }
+.nav__burger span:last-child { top: 24px; right: 17px; }
+
+.nav.is-open .nav__burger span { top: 20px; right: 12px; }
+.nav.is-open .nav__burger span:first-child { transform: rotate(45deg); }
+.nav.is-open .nav__burger span:last-child { transform: rotate(-45deg); }
+
+/* ---------- Mobile drawer: circular reveal from the burger ---------- */
+.nav__drawer {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-8);
+  padding: 112px var(--container-gutter) var(--space-10);
+  background: var(--color-bg);
+  clip-path: circle(0 at calc(100% - var(--container-gutter) - 30px) 46px);
+  visibility: hidden;
+  transition:
+    clip-path var(--dur-slower) var(--ease-in-out),
+    visibility 0s linear var(--dur-slower);
+}
+
+.nav.is-open .nav__drawer {
+  clip-path: circle(150vmax at calc(100% - var(--container-gutter) - 30px) 46px);
+  visibility: visible;
+  transition: clip-path var(--dur-slower) var(--ease-in-out);
+}
+
+.nav__drawer-links {
+  display: grid;
+}
+
+.nav__drawer-link {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-4);
+  padding-block: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity var(--dur-slow) var(--ease-out),
+    transform var(--dur-slow) var(--ease-out),
+    color var(--dur-fast) var(--ease-out);
+}
+
+.nav.is-open .nav__drawer-link {
+  opacity: 1;
+  transform: none;
+  transition-delay: calc(220ms + var(--i) * 60ms), calc(220ms + var(--i) * 60ms), 0ms;
+}
+
+.nav__drawer-link:active {
+  color: var(--color-primary);
+}
+
+.nav__drawer-link.active {
+  color: var(--color-primary);
+}
+
+.nav__drawer-num {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-accent);
+}
+
+.nav__drawer-cta {
+  align-self: stretch;
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity var(--dur-slow) var(--ease-out),
+    transform var(--dur-slow) var(--ease-out);
+}
+
+.nav.is-open .nav__drawer-cta {
+  opacity: 1;
+  transform: none;
+  transition-delay: 560ms;
+}
+
+/* ---------- Breakpoints ---------- */
+@media (max-width: 900px) {
+  .nav__links { display: none; }
+  .nav__burger { display: block; }
+}
+
+@media (min-width: 901px) {
+  .nav__drawer { display: none; }
+}
+
+@media (max-width: 560px) {
+  .nav__cta { display: none; }
+}

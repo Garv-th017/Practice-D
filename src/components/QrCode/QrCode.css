@@ -1,0 +1,8 @@
+.qr {
+  display: block;
+  flex-shrink: 0;
+}
+
+.qr path {
+  fill: currentColor;
+}

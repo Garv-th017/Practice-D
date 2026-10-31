@@ -1,0 +1,61 @@
+.ill {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.ill-sky { fill: color-mix(in oklab, var(--color-primary) 14%, var(--color-bg-elevated)); }
+.ill-sun { fill: var(--color-accent); }
+.ill-hill { fill: color-mix(in oklab, var(--color-success) 22%, var(--color-bg-elevated)); }
+.ill-road { fill: color-mix(in oklab, var(--color-text) 22%, var(--color-bg-elevated)); }
+
+.ill-road-line {
+  stroke: var(--color-bg-elevated);
+  stroke-width: 2;
+  stroke-dasharray: 10 8;
+}
+
+.ill-bus { fill: var(--color-primary); }
+.ill-stripe { fill: var(--color-accent); }
+.ill-window { fill: color-mix(in oklab, var(--color-bg-elevated) 82%, var(--color-primary)); }
+.ill-wheel { fill: var(--color-text); }
+.ill-hub { fill: var(--color-bg-elevated); }
+
+.ill-wall { fill: color-mix(in oklab, var(--color-primary) 8%, var(--color-bg-elevated)); }
+.ill-floor { fill: color-mix(in oklab, var(--color-text) 10%, var(--color-bg-elevated)); }
+.ill-seat { fill: var(--color-primary); }
+.ill-seat-back { fill: color-mix(in oklab, var(--color-primary) 75%, var(--color-text)); }
+.ill-light { fill: var(--color-accent); }
+
+.ill-window-band { fill: color-mix(in oklab, var(--color-primary) 20%, var(--color-bg-elevated)); }
+.ill-berth { fill: var(--color-bg-elevated); stroke: var(--color-border-strong); stroke-width: 1.5; }
+.ill-pillow { fill: var(--color-primary-soft); }
+.ill-blanket { fill: var(--color-primary); }
+
+.ill-curtain {
+  fill: none;
+  stroke: var(--color-accent);
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.ill-mirror { fill: color-mix(in oklab, var(--color-primary) 18%, var(--color-bg-elevated)); stroke: var(--color-border-strong); stroke-width: 1.5; }
+
+.ill-shine {
+  fill: none;
+  stroke: var(--color-bg-elevated);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.ill-counter { fill: var(--color-border-strong); }
+.ill-sink { fill: var(--color-bg-elevated); stroke: var(--color-border-strong); stroke-width: 1.5; }
+
+.ill-tap {
+  fill: none;
+  stroke: var(--color-text-muted);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.ill-cabinet { fill: color-mix(in oklab, var(--color-primary) 30%, var(--color-bg-elevated)); }

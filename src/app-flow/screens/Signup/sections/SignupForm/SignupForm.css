@@ -1,0 +1,45 @@
+.signup-form {
+  display: grid;
+  gap: 10px;
+}
+
+.signup-form__check {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11.5px;
+  color: var(--color-text-muted);
+  cursor: pointer;
+}
+
+.signup-form__check input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.signup-form__box {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid var(--color-border-strong);
+  border-radius: 5px;
+  background: var(--color-bg-elevated);
+  color: transparent;
+  transition:
+    background-color var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out);
+}
+
+.signup-form__check input:checked + .signup-form__box {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.signup-form__check input:focus-visible + .signup-form__box {
+  box-shadow: var(--ring-focus);
+}

@@ -1,0 +1,8 @@
+.offline {
+  gap: 20px;
+}
+
+.offline__actions {
+  display: grid;
+  gap: 8px;
+}

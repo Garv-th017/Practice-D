@@ -1,0 +1,5 @@
+.date-quick {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+}

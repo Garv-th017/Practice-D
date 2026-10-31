@@ -1,0 +1,30 @@
+.hold-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border-radius: 12px;
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.hold-banner .k-grow {
+  color: var(--color-text);
+}
+
+.hold-banner__time {
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.hold-banner.is-low {
+  background: var(--color-warning-soft);
+  color: var(--color-text);
+}
+
+.hold-banner.is-expired {
+  background: var(--color-danger-soft);
+  color: var(--color-danger);
+}

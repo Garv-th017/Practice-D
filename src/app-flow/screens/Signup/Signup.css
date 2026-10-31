@@ -1,0 +1,35 @@
+.signup {
+  gap: 12px;
+}
+
+.signup .auth-switch {
+  margin-top: auto;
+}
+
+.signup .app-bar {
+  margin-bottom: 0;
+}
+
+.signup__head h1 {
+  font-size: 22px;
+  line-height: 1.15;
+}
+
+.signup__head p {
+  color: var(--color-text-muted);
+}
+
+.signup__or {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  color: var(--color-text-subtle);
+}
+
+.signup__or::before,
+.signup__or::after {
+  content: "";
+  flex: 1;
+  border-top: 1px solid var(--color-border);
+}
